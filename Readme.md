@@ -1,6 +1,6 @@
 # pyMGL
 Enabler for drawing computer geometry directly into Maya viewport when coding in python
-
+![[pyMGLagents.jpg]]
 This script enables drawing geometry directly from python code into the Maya openGL viewport. 
 
 It has been developed around 2010-2011 for an older version of Maya. I am posting my source code for reference for those who might want to work with the Maya viewport.
@@ -77,6 +77,7 @@ pyMGL.showText()
 ```
 
 ## Limitations
+[https://www.pycheung.com/weblog/wp-content/uploads/zrtn_002p50800343_tn.jpg]
 This has been initially developed before Maya viewport 2.0 
-While I had modified it to work with an earlier version of viewport 2.0 (by switching MHardwareRenderer to MRenderer in the node) it appears that the api has now been updated so it may no longer work for later version of viewport 2.0.
+While I had modified it to work with an earlier version of viewport 2.0 (by switching MHardwareRenderer to MRenderer in the node) it appears that the api has now been updated so it may no longer work for later version of viewport 2.0. (see https://www.pycheung.com/weblog/post/700)
 For those who are interested, the code example https://help.autodesk.com/view/MAYAUL/2017/ENU/?guid=__py_ref_scripted_2py_foot_print_node_8py_example_html may provide some insights into updating the code to match the later version of the maya API.

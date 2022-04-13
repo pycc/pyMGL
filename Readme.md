@@ -1,9 +1,9 @@
 # pyMGL
 Enabler for drawing computer geometry directly into Maya viewport when coding in python
 
-This script enables drawing geometry directly from python code into the Maya openGL viewport. 
+![alt text](https://www.pycheung.com/weblog/wp-content/uploads/zrtn_002p277bc43e_tn.jpg)
 
-It has been developed around 2010-2011 for an older version of Maya. I am posting my source code for reference for those who might want to work with the Maya viewport.
+This script enables drawing geometry directly from python code into the Maya openGL viewport.  It has been developed around 2010-2011 for an older version of Maya. I am posting my source code for reference for those who might want to work with the Maya viewport.
 
 The problem of injecting opengl code into the Maya viewport is that it does not presist once it is drawn once. One known way to counter that is to draw using a custom locator node (as demonstrated in [https://www.fevrierdorian.com/blog/post/2010/02/12/Creating-custom-locator-with-Maya-s-Python-API](https://www.fevrierdorian.com/blog/post/2010/02/12/Creating-custom-locator-with-Maya-s-Python-API)). Another problem is to make the opengl context more accessible in the Maya python editor for geometry. The way this is done here is to store geometry with an ID which gets turned into raw GL code stored in a display list in openGL. In the custom locator node, the display list is used for constant redraw to maintain the drawing in the viewport. 
 
@@ -76,7 +76,14 @@ cmds.refresh()
 pyMGL.showText()
 ```
 
+see demo here https://www.pycheung.com/weblog/post/449
+
 ## Limitations
+
+![alt text](https://www.pycheung.com/weblog/wp-content/uploads/zrtn_002p50800343_tn.jpg)
+
 This has been initially developed before Maya viewport 2.0 
-While I had modified it to work with an earlier version of viewport 2.0 (by switching MHardwareRenderer to MRenderer in the node) it appears that the api has now been updated so it may no longer work for later version of viewport 2.0.
+
+While I had modified it to work with an earlier version of viewport 2.0 (by switching MHardwareRenderer to MRenderer in the node) it appears that the api has now been updated so it may no longer work for later version of viewport 2.0. (see https://www.pycheung.com/weblog/post/700)
+
 For those who are interested, the code example https://help.autodesk.com/view/MAYAUL/2017/ENU/?guid=__py_ref_scripted_2py_foot_print_node_8py_example_html may provide some insights into updating the code to match the later version of the maya API.

@@ -1,5 +1,5 @@
 # pyMGL
-Enabler for drawing computer geometry directly into Maya viewport when coding in python
+Enabler for drawing computer geometry directly into Maya viewport when coding in python within Maya
 
 ![alt text](https://www.pycheung.com/weblog/wp-content/uploads/zrtn_002p277bc43e_tn.jpg)
 
